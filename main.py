@@ -23,7 +23,8 @@ def download(url, content):
     name = url.rsplit('/', 1)[1]
     folder = url.rsplit('/', 2)[1]
 
-    folder_url = '/Users/ningcol/Desktop/luoo/download/' + folder
+    # folder_url = '/Users/ningcol/Desktop/luoo/download/' + folder
+    folder_url = '/home/ningcol/share/luoo/download/' + folder
     isExists=os.path.exists(folder_url)
     if not isExists:
         os.makedirs(folder_url)
@@ -52,6 +53,6 @@ def run(time, index):
 
 
 if __name__ == '__main__':
-    time = 1
+    time = 123
     index = 1
     run(time, index)
