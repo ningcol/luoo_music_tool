@@ -42,17 +42,19 @@ def prase_index(time, index):
 
 
 def run(time, index):
-    url, index = prase_index(time, index)
-    if len(url) == 0:
-        time = time + 1
-        index = 1
-        run(time, index)
-    else:
-        run(time, int(index) + 1)
+    while time < 1001:
+        url, index = prase_index(time, index)
+        if len(url) == 0:
+            time = time + 1
+            index = 1
+            continue
+        else:
+            index += 1
+            continue
 
 
 
 if __name__ == '__main__':
-    time = 123
+    time = 226
     index = 1
     run(time, index)
